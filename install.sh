@@ -1,8 +1,8 @@
 echo \" <<'POWERSHELL_SCRIPT' >/dev/null # " | Out-Null
-if !(([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    echo "what are you doing?"
+if (!(([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) {
+        echo "what are you doing?"
 } else {
-    echo "what the FUCK are you doing?"
+        echo "what the FUCK are you doing?"
 }
 <#
 POWERSHELL_SCRIPT
